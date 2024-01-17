@@ -15,7 +15,7 @@ export const makeStore = () => {
   return configureStore({
     reducer: {
       [frontendAPI.reducerPath]: frontendAPI.reducer,
-      products: persistReducer(productPersistConfig, productReducer),
+      products: persistReducer<ReturnType<typeof productReducer>>(productPersistConfig, productReducer),
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat([frontendAPI.middleware]),
