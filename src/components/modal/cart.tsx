@@ -50,7 +50,9 @@ export function CartModal() {
       <SheetTrigger asChild>
         <Button variant={'ghost'}>
           <ShoppingCartIcon className="mr-2 h-4 w-4 lg:text-next-blue" />
-          <span className="lg:text-next-blue">1</span>
+          <span className="lg:text-next-blue">
+            {allCartItems?.length || ''}
+          </span>
         </Button>
       </SheetTrigger>
       <SheetContent className="sm:!max-w-[450px]">
@@ -59,7 +61,7 @@ export function CartModal() {
           <SheetTitle>Cart</SheetTitle>
           <SheetDescription>Manage all your orders here...</SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4 overflow-scroll h-[calc(100vh-140px)] place-content-start">
+        <div className="grid overflow-scroll h-[calc(100vh-140px)] place-content-start gap-10">
           {allCartItems?.map((wishlist) => (
             <div key={wishlist.id} className="grid grid-cols-2 gap-4 h-[150px]">
               <div className="relative h-[150px]">

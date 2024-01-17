@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
-import ProductInfo from './product-info'
+// import ProductInfo from './product-info'
 import { useAppDispatch } from '@/lib/hooks/useRedux'
 import { modifyCartItem, modifyWishlistItem } from '@/lib/redux/slice/product'
 import { useToast } from '@/components/ui/use-toast'
